@@ -1,0 +1,8 @@
+tolerance 2.0
+seed -1
+output 13333333333333333332t0.txt
+filetype xyz
+structure 13333333333333333332.xyz
+	number 4
+	inside cube 0. 0. 0. 1000.
+end structure
