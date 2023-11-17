@@ -32,7 +32,7 @@ function lammpsbonds(chainlen::Int,nmolecule::Int)
         atom2(inner,outer) = (outer-1)*chainlen+inner+1
         bond(inner,outer) = inner+(outer-1)*(chainlen-1)
         lines = [join((bond(i,j),1,atom1(i,j),atom2(i,j),"\n")," ") for i=1:chainlen-1, j=1:nmolecule]
-       # add additional bonds to make rings
+        # add additional bonds to make rings
         additional_bonds = [join(((bond(j,5)),1,atom1(1,j),atom1(chainlen,j),"\n")," ") for i=1:1 for j=1:nmolecule]
 	print(lines)
 	print(additional_bonds)
